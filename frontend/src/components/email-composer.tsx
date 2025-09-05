@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { cn } from "@/lib/utils";
 import {
+  Dices,
   Loader2,
   Maximize2,
   Minimize2,
@@ -19,6 +20,7 @@ import {
 import { useRef, useState } from "react";
 import { toast } from "sonner";
 import { sendEmail } from "@/services/send-email";
+import { exampleEmails } from "@/constants/example-emails";
 
 interface Attachment {
   id: string;
@@ -118,6 +120,19 @@ export function GmailComposer() {
     setIsMaximized(false);
   };
 
+  const handleExampleEmail = () => {
+    exampleEmails.sort(() => 0.5 - Math.random());
+    const example = exampleEmails[0];
+    setSubject(example.subject);
+    setBody(example.body);
+  };
+
+  const handleDiscard = () => {
+    setSubject("");
+    setBody("");
+    setAttachment(undefined);
+  };
+
   if (!isOpen) {
     return (
       <Button
@@ -207,16 +222,28 @@ export function GmailComposer() {
             </div>
 
             {/* Toolbar */}
-            <div className="flex items-center space-x-1 p-2 border-b bg-muted/20">
+            <div className="flex items-center justify-between space-x-1 p-2 border-b bg-muted/20">
               <Button
                 variant="ghost"
                 size="sm"
                 onClick={() => fileInputRef.current?.click()}
-                className="p-0"
+                className="p-0 cursor-pointer"
               >
                 <Paperclip className="w-4 h-4" />
                 Anexar arquivo
               </Button>
+
+              <div>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => handleExampleEmail()}
+                  className="p-0 cursor-pointer"
+                >
+                  <Dices className="w-4 h-4" />
+                  E-mail aleatório
+                </Button>
+              </div>
             </div>
 
             {/* Message Body */}
@@ -275,7 +302,7 @@ export function GmailComposer() {
               <Button
                 variant="ghost"
                 size="sm"
-                onClick={() => setIsOpen(false)}
+                onClick={() => handleDiscard()}
                 className="text-muted-foreground"
               >
                 Descartar
