@@ -4,3 +4,6 @@ python-multipart
 nltk
 huggingface-hub
 python-dotenv
+python-multipart
+pymupdf
+requests

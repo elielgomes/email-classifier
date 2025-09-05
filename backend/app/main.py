@@ -1,15 +1,21 @@
 from fastapi import FastAPI, Form, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
-import fitz  # PyMuPDF
+import fitz
 
 from app.nlp import preprocess_text
 from app.ai import classify_and_respond
+from dotenv import load_dotenv
+import os
+
+
+load_dotenv()
+
+APP_URL = os.getenv("APP_URL")
 
 app = FastAPI(title="Email Classifier API")
 
 origins = [
-    "http://localhost:3000",
-    "http://localhost:3001",
+    APP_URL
 ]
 
 app.add_middleware(
