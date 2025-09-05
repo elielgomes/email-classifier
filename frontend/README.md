@@ -1,5 +1,9 @@
 # Setup Frontend (Nextjs)
 
+<p align='center'>
+  <img src='https://github.com/user-attachments/assets/d7894813-c0a3-4bca-b9f7-f9651458db77'/>
+</p>
+
 ## ⚙️ Instalação e Configuração
 
 ### 📋 Pré-requisitos
