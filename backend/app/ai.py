@@ -19,18 +19,25 @@ client = InferenceClient(
 
 def classify_and_respond(subject: str, body: str) -> dict:
     prompt = f"""
-Classifique este email como 'PRODUCTIVE' ou 'UNPRODUCTIVE':
-- PRODUCTIVE: solicita algo relacionado a serviços financeiros.
-- UNPRODUCTIVE: não tem relação ou não requer ação.
+Você é um funcionário de um banco brasileiro responsável por responder e-mails de clientes. Para cada e-mail recebido, faça o seguinte:
 
-Gere também uma resposta educada apropriada à categoria.
+1. Classifique o e-mail em uma das categorias:
+- "PRODUCTIVE": o e-mail solicita algo relacionado a serviços financeiros (ex.: abertura de conta, empréstimo, cartão, investimentos, dúvidas sobre transações).
+- "UNPRODUCTIVE": o e-mail não tem relação com serviços financeiros ou não requer ação.
+
+2. Gere uma resposta educada e profissional, apropriada para a categoria, considerando o contexto do e-mail do cliente.
+
+É importante responder sempre em português, independentemente do idioma do e-mail original.
 
 Email:
 Subject: {subject}
 Body: {body}
 
-Responda estritamente no formato JSON:
-{{ "category": "...", "suggested_response": "..." }}
+Responda estritamente no seguinte formato JSON:
+{{
+    "category": "PRODUCTIVE" ou "UNPRODUCTIVE",
+    "suggested_response": "Sua resposta educada ao cliente aqui"
+}}
 """
     try:
         completion = client.chat.completions.create(
