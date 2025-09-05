@@ -48,7 +48,7 @@ Você pode acessar o projeto clicando [aqui](https://email-classifier-three.verc
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](https://github.com/elielgomes/email-classifier/blob/main/LICENSE.md).
+Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](https://github.com/elielgomes/email-classifier/blob/main/backend/LICENSE.md).
 
 ## ✒️ Autor
 

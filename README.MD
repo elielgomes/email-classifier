@@ -10,7 +10,18 @@ A interface é intuitiva e amigável, oferecendo uma experiência prática para 
 - **Respostas automáticas personalizadas** baseadas no conteúdo do e-mail.
 - **Frontend moderno** com Next.js, TailwindCSS e Shadcn UI.
 - **Backend escalável** com Python e FastAPI.
-- **Persistência offline** usando IndexedDB.
+
+## 🚀 Funcionalidades principais
+
+- Upload de e-mails (assunto, corpo) com suporte a anexos PDF.
+- Processamento e classificação do e-mail no backend via Hugging Face.
+- Persistência de dados usando IndexedDB
+- Dashboard intuitivo com:
+  - Filtro por categoria (Produtivo / Improdutivo).
+  - Busca por assunto.
+  - Paginação de registros.
+  - Ações rápidas: arquivar, deletar, favoritar.
+  - Alternância de tema Dark/Light.
 
 ---
 
@@ -93,7 +104,7 @@ Você pode acessar o projeto clicando [aqui](https://email-classifier-three.verc
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](https://github.com/elielgomes/email-classifier/blob/main/LICENSE.md).
+Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [LICENSE](https://github.com/elielgomes/email-classifier/blob/main/frontend/LICENSE.md).
 
 ## ✒️ Autor
 
