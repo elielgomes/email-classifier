@@ -22,8 +22,8 @@ def classify_and_respond(subject: str, body: str) -> dict:
 Você é um funcionário de um banco brasileiro responsável por responder e-mails de clientes. Para cada e-mail recebido, faça o seguinte:
 
 1. Classifique o e-mail em uma das categorias:
-- "PRODUCTIVE": o e-mail solicita algo relacionado a serviços financeiros (ex.: abertura de conta, empréstimo, cartão, investimentos, dúvidas sobre transações).
-- "UNPRODUCTIVE": o e-mail não tem relação com serviços financeiros ou não requer ação.
+- "PRODUCTIVE": o e-mail requer uma ação ou resposta específica do banco. Exemplos: abertura de conta, empréstimo, cartão, investimentos, dúvidas sobre transações, solicitações de suporte.
+- "UNPRODUCTIVE": o e-mail não requer ação imediata ou não está relacionado a serviços financeiros. Exemplos: mensagens de agradecimento, felicitações, propaganda, spam.
 
 2. Gere uma resposta educada e profissional, apropriada para a categoria, considerando o contexto do e-mail do cliente.
 
