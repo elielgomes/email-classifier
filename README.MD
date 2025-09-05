@@ -1,5 +1,9 @@
 # Sistema de Classificação de E-mails com IA
 
+<p align='center'>
+  <img src='https://github.com/user-attachments/assets/d7894813-c0a3-4bca-b9f7-f9651458db77'/>
+</p>
+
 ## 📌 Introdução
 
 Este projeto é um sistema de **classificação de e-mails utilizando Inteligência Artificial**, desenvolvido para uma instituição financeira fictícia.  
@@ -109,5 +113,6 @@ Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [L
 ## ✒️ Autor
 
 Feito por [Eliel Gomes](https://github.com/elielgomes).
+
 
 
