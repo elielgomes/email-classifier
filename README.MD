@@ -50,6 +50,8 @@ Configure seu token do Hugging Face em HF_TOKEN:
 HF_TOKEN=seutokenaqui
 ```
 
+Para configurar seu token basta criar uma conta no [Huggingface](https://huggingface.co/) e criar seu token com a permissão READ em ['Access Tokens'](https://huggingface.co/settings/tokens)
+
 3. **Instalar Dependências do Backend e Executar:**
 
 ```bash
