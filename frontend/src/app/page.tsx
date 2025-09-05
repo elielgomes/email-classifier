@@ -35,6 +35,7 @@ export default function Home() {
       getEmailsFiltered({
         search: tableFilters.filters.search,
         archived: false,
+				category: tableFilters.filters.category,
       }).then(setEmails);
     });
   };
@@ -53,7 +54,7 @@ export default function Home() {
       dbEvents.removeEventListener("email.updated", reload);
       dbEvents.removeEventListener("email.deleted", reload);
     };
-  }, []);
+  }, [tableFilters.filters]);
 
   const columns = emailColumns({
     onArchive: async ({ id }) => {

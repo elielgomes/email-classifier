@@ -1,6 +1,7 @@
 "use client";
 
 import { EmailCategory } from "@/enums/email-category";
+import { emitDbEvent } from "@/helpers/db-events";
 import { debounce, isEqual } from "lodash";
 import { useCallback, useEffect, useMemo, useState } from "react";
 

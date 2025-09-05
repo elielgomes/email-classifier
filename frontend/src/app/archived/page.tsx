@@ -52,7 +52,7 @@ export default function Archived() {
       dbEvents.removeEventListener("email.updated", reload);
       dbEvents.removeEventListener("email.deleted", reload);
     };
-  }, []);
+  }, [tableFilters.filters]);
 
   const columns = emailColumns({
     onArchive: async ({ id }) => {
