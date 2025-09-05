@@ -57,9 +57,19 @@ HF_TOKEN=seutokenaqui
 
 ```bash
 cd backend
+
+# Windows
 python -m venv .venv
-.venv\Scripts\activate   # Windows
-# source .venv/bin/activate  # Linux/Mac
+
+# Linux/Mac
+python3 -m venv .venv
+
+# Windows
+.venv\Scripts\activate
+
+# Linux/Mac
+source .venv/bin/activate
+
 pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
@@ -89,3 +99,4 @@ Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [L
 ## ✒️ Autor
 
 Feito por [Eliel Gomes](https://github.com/elielgomes).
+
