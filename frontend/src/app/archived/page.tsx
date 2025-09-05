@@ -15,26 +15,25 @@ import {
 import { dbEvents } from "@/helpers/db-events";
 import { EmailRegister } from "@/interfaces/email-register";
 import {
-  toggleArchived,
   deleteEmail,
   getEmailsFiltered,
+  toggleArchived,
   toggleStarred,
 } from "@/services/db";
 import { useRouter } from "next/navigation";
-import { useEffect, useState, useTransition } from "react";
+import {  useEffect, useState, useTransition } from "react";
 
-export default function Home() {
+export default function Archived() {
   const [emails, setEmails] = useState<EmailRegister[]>([]);
   const [isPending, startTransition] = useTransition();
   const { tableFilters } = useEmailTableFilters();
-
 	const router = useRouter();
 
   const loadEmails = () => {
     startTransition(() => {
       getEmailsFiltered({
         search: tableFilters.filters.search,
-        archived: false,
+        archived: true,
       }).then(setEmails);
     });
   };
@@ -65,7 +64,7 @@ export default function Home() {
     onStarred: async ({ id }) => {
       await toggleStarred(id);
     },
-  });
+  }, false);
 
   return (
     <PageContainer>

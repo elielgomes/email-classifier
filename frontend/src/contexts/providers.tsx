@@ -12,7 +12,7 @@ export const Providers = ({ children }: { children: React.ReactNode }) => {
       disableTransitionOnChange
     >
       {children}
-      <Toaster richColors />
+      <Toaster richColors position="top-right" />
     </ThemeProvider>
   );
 };

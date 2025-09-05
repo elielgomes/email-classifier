@@ -23,18 +23,17 @@ import {
 import { useRouter } from "next/navigation";
 import { useEffect, useState, useTransition } from "react";
 
-export default function Home() {
+export default function Starred() {
   const [emails, setEmails] = useState<EmailRegister[]>([]);
   const [isPending, startTransition] = useTransition();
   const { tableFilters } = useEmailTableFilters();
-
 	const router = useRouter();
 
   const loadEmails = () => {
     startTransition(() => {
       getEmailsFiltered({
         search: tableFilters.filters.search,
-        archived: false,
+        starred: true,
       }).then(setEmails);
     });
   };

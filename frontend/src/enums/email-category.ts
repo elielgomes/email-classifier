@@ -1,0 +1,4 @@
+export enum EmailCategory {
+  PRODUCTIVE = "PRODUCTIVE",
+  UNPRODUCTIVE = "UNPRODUCTIVE",
+}
