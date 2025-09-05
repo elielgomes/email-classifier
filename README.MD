@@ -10,10 +10,7 @@ A interface é intuitiva e amigável, oferecendo uma experiência prática para 
 - **Respostas automáticas personalizadas** baseadas no conteúdo do e-mail.
 - **Frontend moderno** com Next.js, TailwindCSS e Shadcn UI.
 - **Backend escalável** com Python e FastAPI.
-- **Banco de dados relacional** PostgreSQL gerenciado via Prisma ORM.
-- **Autenticação segura** com JWT.
 - **Persistência offline** usando IndexedDB.
-- **Deployment fácil** usando Docker e Render.
 
 ---
 
@@ -99,4 +96,5 @@ Este projeto está sob a licença MIT. Para mais detalhes, consulte o arquivo [L
 ## ✒️ Autor
 
 Feito por [Eliel Gomes](https://github.com/elielgomes).
+
 
