@@ -30,7 +30,7 @@ export const emailColumns = (
 ): ColumnDef<EmailColumns>[] => {
   const columns: ColumnDef<EmailColumns>[] = [];
 
-	 if (showStarred) {
+  if (showStarred) {
     columns.push({
       id: "starred",
       header: "",
@@ -41,7 +41,10 @@ export const emailColumns = (
               <Button
                 variant="ghost"
                 className="h-8 w-8 p-0 cursor-pointer"
-                onClick={() => actions.onStarred({ id: row.original.id })}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  actions.onStarred({ id: row.original.id });
+                }}
               >
                 <span className="sr-only">Favoritar</span>
                 <Star
@@ -59,8 +62,7 @@ export const emailColumns = (
     });
   }
 
-
-	columns.push(
+  columns.push(
     {
       id: "subject",
       cell: ({ row }) => {
@@ -120,7 +122,10 @@ export const emailColumns = (
                   <Button
                     variant="ghost"
                     className="h-8 w-8 p-0 cursor-pointer"
-                    onClick={() => actions.onArchive({ id: row.original.id })}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      actions.onArchive({ id: row.original.id });
+                    }}
                   >
                     <span className="sr-only">Arquivar</span>
                     {row.original.archived ? (
@@ -140,7 +145,10 @@ export const emailColumns = (
                   <Button
                     variant="ghost"
                     className="h-8 w-8 p-0 cursor-pointer"
-                    onClick={() => actions.onDelete({ id: row.original.id })}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      actions.onDelete({ id: row.original.id });
+                    }}
                   >
                     <span className="sr-only">Excluir</span>
                     <Trash2 className="h-4 w-4" />
@@ -167,7 +175,7 @@ export const emailColumns = (
           </div>
         );
       },
-    },
-	)
-	return columns;
+    }
+  );
+  return columns;
 };
